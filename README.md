@@ -22,13 +22,19 @@
     - Register TMDB API and create an app to get access token
     - Get data from TMDB now playing movie list API
     - Created moviesSlice
+    - Updated sotre with movies data
+    - Planning for MainContainer and SecondaryContainer
+    - Fetch data for trailer video
+    - Update store with trailer video data
+    - Embedded the Youtube video and make it autoplay and mute
+    - Tailwind classes to make MainContainer look good
 
 # Features
 
 - Login/Sign Up
 
   - Sign In /Sign Up Form
-  - redirec to browse page
+  - redirect to browse page
 
 - Browse(after authentication)
 
