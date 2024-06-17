@@ -15,6 +15,12 @@
     - Created Redux Sotre with userSlice
     - Implemented Sign Out
     - Updated Profile
+    - BugFix: Sign up user display name and profile picture
+    - BugFix: if the user is not logged in Redirect/ Browse to login page and vice versa
+    - Unsubscribed to the onAuthStateChange callback
+    - Added hardcoded values to the constant file
+    - Register TMDB API and create an app to get access token
+    - Get data from TMDB now playing movie list API
 
 # Features
 
