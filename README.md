@@ -21,6 +21,7 @@
     - Added hardcoded values to the constant file
     - Register TMDB API and create an app to get access token
     - Get data from TMDB now playing movie list API
+    - Created moviesSlice
 
 # Features
 
