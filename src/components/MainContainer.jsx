@@ -7,7 +7,7 @@ const MainContainer = () => {
   if (movies === null) return; // OR if(!movies) return;
 
   const displayMovie = movies[0];
-  console.log("displayMoviee", displayMovie);
+  //   console.log("displayMoviee", displayMovie);
 
   const { original_title, overview, id } = displayMovie;
   return (
