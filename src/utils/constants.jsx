@@ -23,3 +23,6 @@ export const SUPPORTED_LANGUAGES = [
   { identifier: "hindi", name: "Hindi" },
   { identifier: "spanish", name: "Spanish" },
 ];
+
+export const GROQ_CLOUD_KEY =
+  "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";
