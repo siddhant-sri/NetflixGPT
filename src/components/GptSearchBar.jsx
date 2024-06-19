@@ -96,7 +96,7 @@ const GptSearchBar = () => {
         </button>
       </form>
       {loading ? (
-        <div className="text-white   text-3xl font-bold p-3 mt-3">
+        <div className="text-white bg-black bg-opacity-70 text-3xl font-bold p-3 mt-3">
           Getting Your Search Results...
         </div>
       ) : null}

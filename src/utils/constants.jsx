@@ -11,8 +11,7 @@ export const API_OPTIONS = {
   method: "GET",
   headers: {
     accept: "application/json",
-    Authorization:
-      "Bearer eyJhbGciOiJIUzI1NiJ9.eyJhdWQiOiIxNjNkNzdkZWZkOWRiYzA1ZDc1NjkyNmE1YWRkZTRkZCIsInN1YiI6IjY2NmM5OTk0NmVmNDljOGFhZTE4ODdiNCIsInNjb3BlcyI6WyJhcGlfcmVhZCJdLCJ2ZXJzaW9uIjoxfQ.sT0TFWk_UPIzvq2pC86jIOarEXUJ-MFHDTTLB1HqSRE",
+    Authorization: "Bearer " + import.meta.env.VITE_TMDB_API_KEY,
   },
 };
 
@@ -24,5 +23,4 @@ export const SUPPORTED_LANGUAGES = [
   { identifier: "spanish", name: "Spanish" },
 ];
 
-export const GROQ_CLOUD_KEY =
-  "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";
+export const GROQ_CLOUD_KEY = import.meta.env.VITE_GROQ_CLOUD_KEY;
