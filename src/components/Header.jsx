@@ -17,8 +17,8 @@ const Header = () => {
   const handleSignOut = () => {
     signOut(auth)
       .then(() => {})
-      .catch((error) => {
-        console.log(error.message);
+      .catch(() => {
+        // console.log(error.message);
       });
   };
 

@@ -28,7 +28,7 @@ const GptSearchBar = () => {
   };
 
   const handleGptSearchClick = async () => {
-    console.log(searchText.current.value);
+    // console.log(searchText.current.value);
     setLoading(true);
 
     // Make an API call to GPT API and get movie results
@@ -52,7 +52,7 @@ const GptSearchBar = () => {
       // TODO : Write error handling
     }
 
-    console.log("gpt response", gptResults?.choices[0]?.message?.content);
+    // console.log("gpt response", gptResults?.choices[0]?.message?.content);
 
     // "Sholay, Golmaal, Hera Pheri, Hum Aapke Hain Koun..!, Mughal-e-Azam"
 
@@ -63,11 +63,11 @@ const GptSearchBar = () => {
     // For each movie i will search TMDB API
 
     const promiseArray = gptMovies.map((movie) => searchMovieTMDB(movie));
-    console.log("promiseARRay", promiseArray);
+    // console.log("promiseARRay", promiseArray);
     // [Promise, Promise, Promise, Promise, Promise,]
 
     const tmdbResults = await Promise.all(promiseArray);
-    console.log("resolved promise", tmdbResults);
+    // console.log("resolved promise", tmdbResults);
 
     setLoading(false);
 
