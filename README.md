@@ -37,6 +37,15 @@
     - GPT Search Page
     - GPT Search Bar
     - (*) Multi language feature on GPT page
+    - Get Open AI API key (PAID) => GROQ CLOUD API KEY (Same as openai)
+    - Get Search API call
+    - Fetched gptMovieSuggestions form TMDB
+    - Created gptSlice added data
+    - Reused MovieList component to make movie suggestion container
+    - Memoization
+    - Added .env file
+    - Adding .env file to gitignore
+    - Made our site responsive
 
 # Features
 

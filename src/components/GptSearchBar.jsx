@@ -77,9 +77,9 @@ const GptSearchBar = () => {
   };
 
   return (
-    <div className="pt-[10%] flex flex-col items-center">
+    <div className="pt-[40%] md:pt-[10%] flex flex-col items-center">
       <form
-        className="w-1/2 bg-black grid grid-cols-12"
+        className="w-full md:w-1/2 bg-black grid grid-cols-12"
         onSubmit={(e) => e.preventDefault()}
       >
         <input
@@ -96,7 +96,7 @@ const GptSearchBar = () => {
         </button>
       </form>
       {loading ? (
-        <div className="text-white bg-black bg-opacity-70 text-3xl font-bold p-3 mt-3">
+        <div className="text-white bg-black bg-opacity-70 text-lg md:text-3xl font-bold p-3 mt-3">
           Getting Your Search Results...
         </div>
       ) : null}
