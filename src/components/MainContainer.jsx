@@ -7,7 +7,13 @@ const MainContainer = () => {
   // Early return if movie is null or undefined
   if (movies === null) return; // OR if(!movies) return;
 
-  const displayMovie = movies[0];
+  const randomIndex = (min, max) => {
+    min = Math.ceil(min);
+    max = Math.floor(max);
+    return Math.floor(Math.random() * (max - min + 1)) + min;
+  };
+
+  const displayMovie = movies[randomIndex(0, movies.length - 1)];
   //   console.log("displayMoviee", displayMovie);
 
   const { original_title, overview, id } = displayMovie;
