@@ -37,7 +37,7 @@
     - GPT Search Page
     - GPT Search Bar
     - (*) Multi language feature on GPT page
-    - Get Open AI API key (PAID) => GROQ CLOUD API KEY (Same as openai)
+    - Get Open AI API key (PAID) => GROQ CLOUD API KEY (Same as openai)  -------> Used groqcloud for api of GPT instead of openai
     - Get Search API call
     - Fetched gptMovieSuggestions form TMDB
     - Created gptSlice added data
