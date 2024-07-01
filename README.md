@@ -46,6 +46,7 @@
     - Added .env file
     - Adding .env file to gitignore
     - Made our site responsive
+    - Added new [/browse/:id] route for playing trailer in the app
 
 # Features
 
@@ -71,9 +72,9 @@
   # Upcoming Features List / Fixes
 
   - NetflixGPT
-    - click on moviecard -> browse/ id + playing trailer with display information of the movie
+    - click on moviecard -> browse/ id + playing trailer with display information of the movie => ✅
+    - play butoon should work as intended -> onclick paly movie trariler in the new browse/id => ✅
     - more info -> contains information of the poroject
-    - play butoon should work as intended -> onclick paly movie trariler in the new browse/id
     - user name display with dropdown of signout button
     - login page error validation display better -> display wrong input field
     - integrate some icons for better ui

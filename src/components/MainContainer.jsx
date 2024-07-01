@@ -14,12 +14,12 @@ const MainContainer = () => {
   };
 
   const displayMovie = movies[randomIndex(0, movies.length - 1)];
-  //   console.log("displayMoviee", displayMovie);
+  console.log("displayMoviee", displayMovie);
 
   const { original_title, overview, id } = displayMovie;
   return (
     <div className="pt-[30%] bg-black md:pt-0">
-      <VideoTitle title={original_title} overview={overview} />
+      <VideoTitle title={original_title} overview={overview} movieId={id} />
       <VideoBackground movieId={id} />
     </div>
   );
