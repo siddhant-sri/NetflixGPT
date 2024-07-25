@@ -4,7 +4,7 @@ import { useNavigate } from "react-router-dom";
 import { useDispatch, useSelector } from "react-redux";
 import { useEffect } from "react";
 import { addUser, removeUser } from "../utils/userSlice";
-import { LOGO, SUPPORTED_LANGUAGES } from "../utils/constants";
+import { LOGO, SUPPORTED_LANGUAGES, GUEST_AVATAR } from "../utils/constants";
 import { toggleGptSearchView } from "../utils/gptSlice";
 import { changeLanguage } from "../utils/configSlice";
 
@@ -25,13 +25,14 @@ const Header = () => {
   useEffect(() => {
     const unsubscribe = onAuthStateChanged(auth, (user) => {
       if (user) {
-        const { uid, email, displayName, photoURL } = user;
+        console.log("user", user);
+        const { uid, email, displayName, photoURL, isAnonymous } = user;
         dispatch(
           addUser({
             uid: uid,
             email: email,
-            displayName: displayName,
-            photoURL: photoURL,
+            displayName: isAnonymous ? "Guest" : displayName,
+            photoURL: isAnonymous ? GUEST_AVATAR : photoURL,
           })
         );
         navigate("/browse");
@@ -78,7 +79,7 @@ const Header = () => {
             {showGptSearch ? "Homepage" : "GPT Search"}
           </button>
           <img
-            className="hidden md:inline-block w-12 h-12 mx-1 p-1 rounded-md"
+            className="hidden md:inline-block w-12 h-12 mx-1 p-1 rounded-xl"
             src={user?.photoURL}
             alt="usericon"
           />

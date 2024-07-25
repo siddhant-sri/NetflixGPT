@@ -5,6 +5,7 @@ import {
   createUserWithEmailAndPassword,
   signInWithEmailAndPassword,
   updateProfile,
+  signInAnonymously,
 } from "firebase/auth";
 import { auth } from "../utils/firebase";
 import { useDispatch } from "react-redux";
@@ -94,6 +95,29 @@ const Login = () => {
   const toggleSignInForm = () => {
     setIsSignInForm(!isSignInForm);
   };
+
+  // Anonymous/Guest User login without credentials
+  const handleGuestClick = () => {
+    signInAnonymously(auth)
+      .then((userCredential) => {
+        // dispatch also being called from header
+        const user = userCredential.user;
+        dispatch(
+          addUser({
+            uid: user.uid,
+            email: null,
+            displayName: "Guest",
+            photoURL: USER_AVATAR,
+          })
+        );
+      })
+      .catch((error) => {
+        const errorCode = error.code;
+        const errorMessage = error.message;
+        setErrorMessage(errorCode + "-" + errorMessage);
+      });
+  };
+
   return (
     <div>
       <Header />
@@ -137,6 +161,12 @@ const Login = () => {
           onClick={handleButtonClick}
         >
           {isSignInForm ? "Sign In" : "Sign Up"}
+        </button>
+        <button
+          className="p-4 w-full bg-green-700 rounded-lg"
+          onClick={handleGuestClick}
+        >
+          Guest User
         </button>
         <p className="py-4 cursor-pointer" onClick={toggleSignInForm}>
           {isSignInForm
